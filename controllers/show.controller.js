@@ -14,7 +14,7 @@ export class ShowController {
       return res.render("download", {
         uuid: uuid,
         fileName: file.name,
-        downloadLink: `${process.env.APP_BASE_URL}/files/download/${uuid}`,
+        downloadLink: `${process.env.APP_BASE_URL}files/download/${uuid}`,
         // downloadLink: `/files/download/${uuid}`,
       });
     } catch (error) {

@@ -23,7 +23,7 @@ export class FileController {
 
       return res.json({
         sucess: true,
-        file: `${process.env.APP_BASE_URL}/files/${newFile.uuid}`,
+        file: `${process.env.APP_BASE_URL}files/${newFile.uuid}`,
       });
 
       //   `${process.env.APP_BASE_URL}/files/${newFile.uuid}`, link to download page
@@ -56,7 +56,7 @@ export class FileController {
       text: `${emailFrom} sent mail`,
       html: templateFun({
         emailFrom,
-        downloadLink: `${process.env.APP_BASE_URL}/files/download/${uuid}`,
+        downloadLink: `${process.env.APP_BASE_URL}files/download/${uuid}`,
         // downloadLink: `/files/download/${uuid}`,
         size: 100,
         expires: "24 hrs",

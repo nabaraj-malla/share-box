@@ -4,9 +4,15 @@ import connectToMongo from "./config/connectDB.js";
 import fileRouter from "./routes/file.routes.js";
 import showRouter from "./routes/show.routes.js";
 import downloadRouter from "./routes/download.routes.js";
+import cors from "cors";
 
 const app = express();
 dotenv.config();
+const corsOption = {
+  origin: process.env.ALLOWED_CLIENTS.split(","),
+};
+
+app.use(cors(corsOption));
 app.use(express.json());
 app.set("view engine", "ejs");
 app.set("views", "./views");

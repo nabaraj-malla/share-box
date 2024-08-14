@@ -15,9 +15,9 @@ app.use(express.urlencoded({ extended: false }));
 app.get("/", (req, res) => {
   res.render("addFile");
 });
-app.use("/api/files", fileRouter);
-app.use("/files", showRouter); // displays download page
-app.use("/files/download", downloadRouter);
+app.use("api/files", fileRouter);
+app.use("files", showRouter); // displays download page
+app.use("files/download", downloadRouter);
 app.use(express.static("./public"));
 
 const PORT = process.env.PORT || 3006;

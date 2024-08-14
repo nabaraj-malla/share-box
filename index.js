@@ -8,6 +8,7 @@ import cors from "cors";
 
 const app = express();
 dotenv.config();
+// cors setup
 const corsOption = {
   origin: process.env.ALLOWED_CLIENTS.split(","),
 };

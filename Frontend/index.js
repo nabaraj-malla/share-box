@@ -2,11 +2,10 @@ const dropZone = document.querySelector(".drop-zone");
 const browseBtn = document.querySelector(".browseBtn");
 const fileInput = document.querySelector("#fileInput");
 
-const host = "https://innshare.herokuapp.com/";
-// const host = "http://localhost:5500/";
+// const host = "https://innshare.herokuapp.com/";
 // const host = "http://localhost:4000/";
 
-// const host = "https://share-box.onrender.com/";
+const host = "https://share-box.onrender.com/";
 const uploadURL = `${host}api/files`;
 // const uploadURL = `${host}api/files`;
 

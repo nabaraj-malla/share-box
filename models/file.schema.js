@@ -21,7 +21,7 @@ const fileSchema = new mongoose.Schema(
     receiver: String,
   },
   {
-    timeseries: true,
+    timestamps: true,
   }
 );
 

@@ -14,14 +14,15 @@ const corsOption = {
 };
 
 app.use(cors(corsOption));
+// app.use(cors());
 app.use(express.json());
 app.set("view engine", "ejs");
 app.set("views", "./views");
 app.use(express.urlencoded({ extended: false }));
 
-app.get("/", (req, res) => {
-  res.render("addFile");
-});
+// app.get("/", (req, res) => {
+//   res.render("addFile");
+// });
 app.use("/api/files", fileRouter);
 app.use("/files", showRouter); // displays download page
 app.use("/files/download", downloadRouter);

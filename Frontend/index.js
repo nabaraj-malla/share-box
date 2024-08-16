@@ -3,9 +3,12 @@ const browseBtn = document.querySelector(".browseBtn");
 const fileInput = document.querySelector("#fileInput");
 
 const host = "https://innshare.herokuapp.com/";
-// const host = "http://localhost:3000";
-const uploadURL = `${host}api/file`;
-// const uploadURL = `${host}api/file`;
+// const host = "http://localhost:5500/";
+// const host = "http://localhost:4000/";
+
+// const host = "https://share-box.onrender.com/";
+const uploadURL = `${host}api/files`;
+// const uploadURL = `${host}api/files`;
 
 dropZone.addEventListener("dragover", (e) => {
   e.preventDefault();
